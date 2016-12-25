@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+
 
 # Create your models here.
 class Organization(models.Model):
@@ -8,3 +10,8 @@ class Organization(models.Model):
 class Role(models.Model):
     title = models.CharField(max_length=100)
     # Permissions TBD
+
+
+# class User(AbstractUser):
+#     # Placeholder to allow customization of User model in future
+#     pass
