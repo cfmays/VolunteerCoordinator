@@ -7,12 +7,12 @@ class Organization(models.Model):
     C = 'Charity'
     M = 'Commercial'
     R = 'Religious'
-    name = models.CharField(max_length=2)
-    category = (
+    name = models.CharField(max_length=255)
+    category = models.CharField(max_length=2, choices=(
         ('C', C)
         ('M', M)
         ('R', R)
-    )
+    ))
 
 
 class Role(models.Model):
