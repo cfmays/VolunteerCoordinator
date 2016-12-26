@@ -2,13 +2,16 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
-# Create your models here.
 class Organization(models.Model):
-    name = models.CharField(max_length=255)
-    org_type = (
-        ('C', 'Charity')
-        ('M', 'Commercial')
-        ('R', 'Religious')
+    # Organization types/categories
+    C = 'Charity'
+    M = 'Commercial'
+    R = 'Religious'
+    name = models.CharField(max_length=2)
+    category = (
+        ('C', C)
+        ('M', M)
+        ('R', R)
     )
 
 
