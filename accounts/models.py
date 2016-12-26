@@ -4,14 +4,14 @@ from django.contrib.auth.models import AbstractUser
 
 class Organization(models.Model):
     # Organization types/categories
-    C = 'Charity'
-    M = 'Commercial'
-    R = 'Religious'
+    CHARITY = 'Charity'
+    COMMERCIAL = 'Commercial'
+    RELIGIOUS = 'Religious'
     name = models.CharField(max_length=255)
     category = models.CharField(max_length=2, choices=(
-        ('C', C)
-        ('M', M)
-        ('R', R)
+        ('C', CHARITY),
+        ('M', COMMERCIAL),
+        ('R', RELIGIOUS),
     ))
 
 
