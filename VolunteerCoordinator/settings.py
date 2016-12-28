@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'accounts',
     'jobs',
     'mapping',
+    'accomplishments',
+    'rest_framework',
 ]
 
 MIDDLEWARE_CLASSES = [
