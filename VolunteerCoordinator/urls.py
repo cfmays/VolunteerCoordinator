@@ -20,5 +20,6 @@ import accounts.api as accounts_api
 
 router = routers.SimpleRouter()
 router.register(r'organizations', accounts_api.OrganizationViewSet)
+router.register(r'roles', accounts_api.RoleViewSet)
 
 urlpatterns = router.urls

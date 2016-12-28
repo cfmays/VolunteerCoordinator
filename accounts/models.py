@@ -16,7 +16,15 @@ class Organization(models.Model):
 
 
 class Role(models.Model):
+    PAID = 'Paid'
+    VOLUNTEER = 'Volunteer'
+    INTERN = 'Intern'
     title = models.CharField(max_length=100)
+    category = models.CharField(max_length=2, choices=(
+        ('P', PAID),
+        ('V', VOLUNTEER),
+        ('I', INTERN),
+    ))
     # Permissions TBD
 
 
