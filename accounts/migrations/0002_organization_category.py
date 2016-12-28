@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
     ]
 
     roles = [
-            migrations.AddField(
+        migrations.AddField(
             model_name='role',
             name='category',
             field=models.CharField(choices=[('P', 'Paid'), ('V', 'Volunteer'), ('I', 'Intern')], default='V', max_length = 2),
