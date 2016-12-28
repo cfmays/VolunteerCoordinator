@@ -19,12 +19,12 @@ class Migration(migrations.Migration):
             preserve_default=False,
         ),
     ]
-    
+
     roles = [
             migrations.AddField(
             model_name='role',
             name='category',
-            field=models.CharField(choices=[('P', PAID), ('V', VOLUNTEER), ('I', INTERN)], default='V', max_length = 2),
+            field=models.CharField(choices=[('P', 'Paid'), ('V', 'Volunteer'), ('I', 'Intern')], default='V', max_length = 2),
             preserve_default=False,
         ),
     ]
