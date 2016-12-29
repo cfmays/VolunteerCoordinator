@@ -16,14 +16,18 @@ class Organization(models.Model):
 
 
 class Role(models.Model):
-    PAID = 'Paid'
-    VOLUNTEER = 'Volunteer'
+    OWNER = 'Owner'
+    ADMINISTRATOR = 'Administrator'
+    COORDINATOR = 'Coordinator'
     INTERN = 'Intern'
+    VOLUNTEER = 'Volunteer'
     title = models.CharField(max_length=100)
     category = models.CharField(max_length=2, choices=(
-        ('P', PAID),
-        ('V', VOLUNTEER),
+        ('O', OWNER),
+        ('A', ADMINISTRATOR),
+        ('C', COORDINATOR),
         ('I', INTERN),
+        ('V', VOLUNTEER),
     ))
     # Permissions TBD
 

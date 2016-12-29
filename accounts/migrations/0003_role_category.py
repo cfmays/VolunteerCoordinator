@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='role',
             name='category',
-            field=models.CharField(choices=[('P', 'Paid'), ('V', 'Volunteer'), ('I', 'Intern')], default='C', max_length=2),
+            field=models.CharField(choices=[('O', 'Owner'), ('A', 'Administrator'), ('C', 'Coordinator'), ('I', 'Intern'), ('V', 'Volunteer')], default='V', max_length=2),
             preserve_default=False,
         ),
     ]
