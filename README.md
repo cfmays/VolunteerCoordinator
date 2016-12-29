@@ -2,7 +2,7 @@
 Management of volunteer scheduling
 
 
-<b>Core Functionality<\b>
+<b>Core Functionality
 
 Store information about each volunteer
 <p>Allow for creation of assignments/jobs
