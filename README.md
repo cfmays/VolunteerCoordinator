@@ -1,15 +1,15 @@
 # VolunteerCoordinator
-Management of volunteer scheduling
+<b>Management of volunteer scheduling
 
 
-<b>Core Functionality
+<b>Core Functionality</b>
 
 Store information about each volunteer
 <p>Allow for creation of assignments/jobs
 <p>Allow coordinators and/or volunteers to assign volunteers to assignments/jobs
 <p>Allow volunteers to log in to see schedules and commit to “shifts”
 
-<b>Key Features
+<b>Key Features</b>
 
 Track minimum/maximum number of volunteers per assignment
 <p>Allow recurring schedules, both in terms of creation on calendar and in terms of volunteer assignment
@@ -25,14 +25,14 @@ Track minimum/maximum number of volunteers per assignment
 <p>Dropdown menu or checkboxes should allow user to show all jobs (qualified or not) or to show only a subset of jobs the user is qualified for.
 
 
-<b> Roles/Access Levels
+<b> Roles/Access Levels</b>
 
 <p>Owner: has complete access to all functions of a particular organization’s information.
 <p>Administrator: has complete access to all information but may not be able to add other administrators and may not be able to change certain information. All administrators should have the same level of access.
 <p>Coordinator: has limited access to information. There may be different categories of coordinators with different levels of access. Can place volunteers on the schedule (perhaps only a limited group which are assigned to the coordinator). May be able to create/change/delete assignments/jobs within a certain category.
 <p>Volunteer: has access only to the volunteer’s own schedule information. May be able to see which volunteers are scheduled at which times, but will not be able to change any information relating to any other individual. May only be able to see how many open slots there are.
 
-<b>Nice-to-have Features
+<b>Nice-to-have Features</b>
 
 <p>Set up automatic reports, such as “volunteers who have been inactive for X days”
 <p>Similar to above; ability to create alerts based on “parameter x” is “>, =, <” “trigger level’
@@ -43,17 +43,17 @@ Track minimum/maximum number of volunteers per assignment
 <p>Coordinator and Administrator have ability to push simple messages to users; maybe to display when they open the site rather than email; maybe either/or/both?
 <p>Allow users to offer swap; “I would like to get out of this commitment, can anyone cover my scheduled shift?”
 
-<b>Licensing
+<b>Licensing</b>
 <p>Probably GPL. Maybe LGPL, but I (CAM) don’t really see any reason to prefer LGPL.
 
-<b>Documentation
+<b>Documentation</b>
 <p>Find a free wiki service to host documentation?
 <p>Resources
 <p>https://www.smashingmagazine.com/2013/01/starting-an-open-source-project/
 <p>https://www.airpair.com/python/posts/django-flask-pyramid
 
 
-<b>Code/DB Structure
+<b>Code/DB Structure</b>
 
 <p>DB Structure
 <p>User table, from django, for login
@@ -69,7 +69,7 @@ Track minimum/maximum number of volunteers per assignment
 <p>TBD method of tracking training requirements
 
 
-<b>possible names
+<b>possible names</b>
 VolunSharing
 VolCharley
 VolGroup.org
