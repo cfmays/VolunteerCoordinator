@@ -7,7 +7,7 @@ from django.utils import timezone
 class Job(models.Model):
     # this is a defined job, like "zoo docent" or "aquarium docent" or "office helper"
     title = models.CharField(max_length=255)
-    requires_confirmation = models.BooleanField(default=False) #is the user allowed to schedule herself or must she bid and wait for confirmation?
+    requires_confirmation = models.BooleanField(default=False) #is the user allowed to sign up for this directly or must she apply / be approved?
     cancellation_until = models.DateTimeField(blank=True, null=True) #user can cancel until this cut-off, then needs approval
     # need a "skills required" list
 
@@ -15,9 +15,15 @@ class Task(models.Model):
     title = models.CharField(max_length=255)
     start_date = models.DateTimeField(default=timezone.now)
     end_date = models.DateTimeField(null=True, blank=True)
+    requires_confirmation = models.BooleanField(default=False) #is the user allowed to schedule herself or must she bid and wait for confirmation?
     job = models.ForeignKey(Job, null=True, blank=True)
-    quantity_needed = models.IntegerField() # how many volunteers are needed for this op at this time & location
+    total_quantity = models.IntegerField() # how many volunteers are needed for this task at this time & location
     location = models.ForeignKey("mapping.Location")
     volunteers = models.ManyToManyField("accounts.User")
+
+    @property
+    def quantity_available(self):
+        return self.total_quantity - self.volunteers.count()
+
 
 
