@@ -58,6 +58,7 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'VolunteerCoordinator.urls'
+USE_TZ = True
 
 TEMPLATES = [
     {

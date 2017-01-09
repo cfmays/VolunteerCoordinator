@@ -20,7 +20,6 @@ class Task(models.Model):
     total_quantity = models.IntegerField() # how many volunteers are needed for this task at this time & location
     location = models.ForeignKey("mapping.Location")
     volunteers = models.ManyToManyField("accounts.User")
-
     @property
     def quantity_available(self):
         return self.total_quantity - self.volunteers.count()
